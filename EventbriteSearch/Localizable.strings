@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  EventbriteSearch
+
+  Created by Oliver Dormody on 2/26/14.
+  Copyright (c) 2014 Oliver Dormody. All rights reserved.
+*/
+
+//Misc. strings
+"OKAY" = "OK";
+
+//Error strings
+"ERROR" = "Error";
+"FIELD_ERROR" = "Please enter both a search keyword and city.";
