@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0258F8E718C02A3B00465D5A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 0258F8E618C02A3B00465D5A /* Event.m */; };
+		0258F8EA18C02A3B00465D5A /* VenueDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 0258F8E918C02A3B00465D5A /* VenueDetails.m */; };
 		025CBF5B18BE40B00023EED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CBF5A18BE40B00023EED1 /* Foundation.framework */; };
 		025CBF5D18BE40B00023EED1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CBF5C18BE40B00023EED1 /* CoreGraphics.framework */; };
 		025CBF5F18BE40B00023EED1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CBF5E18BE40B00023EED1 /* UIKit.framework */; };
@@ -19,11 +21,15 @@
 		025CBF7A18BE40B00023EED1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CBF7918BE40B00023EED1 /* XCTest.framework */; };
 		025CBF7B18BE40B00023EED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CBF5A18BE40B00023EED1 /* Foundation.framework */; };
 		025CBF7C18BE40B00023EED1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CBF5E18BE40B00023EED1 /* UIKit.framework */; };
-		025CBF8418BE40B10023EED1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 025CBF8218BE40B10023EED1 /* InfoPlist.strings */; };
-		025CBF8618BE40B10023EED1 /* EventbriteSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CBF8518BE40B10023EED1 /* EventbriteSearchTests.m */; };
 		025CBF9418BE51A60023EED1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 025CBF9318BE51A60023EED1 /* Localizable.strings */; };
-		025CBF9818BE61370023EED1 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CBF9718BE61370023EED1 /* XMLReader.m */; };
 		025CBF9E18BE62F80023EED1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 025CBF9D18BE62F80023EED1 /* MBProgressHUD.m */; };
+		0283A6F118BFB0B5001EC635 /* eb_press_big.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0283A6F018BFB0B5001EC635 /* eb_press_big.gif */; };
+		0283A6F818BFBC08001EC635 /* OJDSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0283A6F718BFBC08001EC635 /* OJDSearchResultsViewController.m */; };
+		02D6325518BE9731007ABB29 /* EventbriteSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02D6325318BE9731007ABB29 /* EventbriteSearch.xcdatamodeld */; };
+		02D6325F18BE9BDF007ABB29 /* OJDResultsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D6325E18BE9BDF007ABB29 /* OJDResultsParser.m */; };
+		02E38C3A18C237B300BF307F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E38C3918C237B300BF307F /* MapKit.framework */; };
+		02E38C3C18C237B700BF307F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E38C3B18C237B700BF307F /* CoreLocation.framework */; };
+		02E38C3F18C2383000BF307F /* OJDMapResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E38C3E18C2383000BF307F /* OJDMapResultViewController.m */; };
 		FB8E6955CF884804B281EFBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71BE4BB1B1E5429F9BF7752A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0258F8E518C02A3B00465D5A /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		0258F8E618C02A3B00465D5A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		0258F8E818C02A3B00465D5A /* VenueDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueDetails.h; sourceTree = "<group>"; };
+		0258F8E918C02A3B00465D5A /* VenueDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueDetails.m; sourceTree = "<group>"; };
 		025CBF5718BE40B00023EED1 /* EventbriteSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventbriteSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025CBF5A18BE40B00023EED1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		025CBF5C18BE40B00023EED1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,14 +64,19 @@
 		025CBF7218BE40B00023EED1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		025CBF7818BE40B00023EED1 /* EventbriteSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventbriteSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		025CBF7918BE40B00023EED1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		025CBF8118BE40B10023EED1 /* EventbriteSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventbriteSearchTests-Info.plist"; sourceTree = "<group>"; };
-		025CBF8318BE40B10023EED1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		025CBF8518BE40B10023EED1 /* EventbriteSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventbriteSearchTests.m; sourceTree = "<group>"; };
 		025CBF9318BE51A60023EED1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		025CBF9618BE61370023EED1 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
-		025CBF9718BE61370023EED1 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
 		025CBF9C18BE62F80023EED1 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		025CBF9D18BE62F80023EED1 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		0283A6F018BFB0B5001EC635 /* eb_press_big.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = eb_press_big.gif; sourceTree = "<group>"; };
+		0283A6F618BFBC08001EC635 /* OJDSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJDSearchResultsViewController.h; sourceTree = "<group>"; };
+		0283A6F718BFBC08001EC635 /* OJDSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJDSearchResultsViewController.m; sourceTree = "<group>"; };
+		02D6325418BE9731007ABB29 /* EventbriteSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventbriteSearch.xcdatamodel; sourceTree = "<group>"; };
+		02D6325D18BE9BDF007ABB29 /* OJDResultsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJDResultsParser.h; sourceTree = "<group>"; };
+		02D6325E18BE9BDF007ABB29 /* OJDResultsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJDResultsParser.m; sourceTree = "<group>"; };
+		02E38C3918C237B300BF307F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		02E38C3B18C237B700BF307F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		02E38C3D18C2383000BF307F /* OJDMapResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OJDMapResultViewController.h; sourceTree = "<group>"; };
+		02E38C3E18C2383000BF307F /* OJDMapResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OJDMapResultViewController.m; sourceTree = "<group>"; };
 		4E29A82A41F44E559E5D36F8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = EventbriteSearch/Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		71BE4BB1B1E5429F9BF7752A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E38C3C18C237B700BF307F /* CoreLocation.framework in Frameworks */,
+				02E38C3A18C237B300BF307F /* MapKit.framework in Frameworks */,
 				025CBF5D18BE40B00023EED1 /* CoreGraphics.framework in Frameworks */,
 				025CBF5F18BE40B00023EED1 /* UIKit.framework in Frameworks */,
 				025CBF5B18BE40B00023EED1 /* Foundation.framework in Frameworks */,
@@ -95,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				025CBF6018BE40B00023EED1 /* EventbriteSearch */,
-				025CBF7F18BE40B10023EED1 /* EventbriteSearchTests */,
 				025CBF5918BE40B00023EED1 /* Frameworks */,
 				025CBF5818BE40B00023EED1 /* Products */,
 				4E29A82A41F44E559E5D36F8 /* Pods.xcconfig */,
@@ -114,6 +130,8 @@
 		025CBF5918BE40B00023EED1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02E38C3B18C237B700BF307F /* CoreLocation.framework */,
+				02E38C3918C237B300BF307F /* MapKit.framework */,
 				025CBF5A18BE40B00023EED1 /* Foundation.framework */,
 				025CBF5C18BE40B00023EED1 /* CoreGraphics.framework */,
 				025CBF5E18BE40B00023EED1 /* UIKit.framework */,
@@ -126,13 +144,19 @@
 		025CBF6018BE40B00023EED1 /* EventbriteSearch */ = {
 			isa = PBXGroup;
 			children = (
+				02D6325218BE971C007ABB29 /* CoreData */,
 				025CBF9B18BE62EC0023EED1 /* MBProgressHUD */,
-				025CBF9518BE61260023EED1 /* XMLReader */,
+				025CBF6C18BE40B00023EED1 /* Main.storyboard */,
 				025CBF6918BE40B00023EED1 /* OJDAppDelegate.h */,
 				025CBF6A18BE40B00023EED1 /* OJDAppDelegate.m */,
-				025CBF6C18BE40B00023EED1 /* Main.storyboard */,
 				025CBF6F18BE40B00023EED1 /* OJDSearchViewController.h */,
 				025CBF7018BE40B00023EED1 /* OJDSearchViewController.m */,
+				02D6325D18BE9BDF007ABB29 /* OJDResultsParser.h */,
+				02D6325E18BE9BDF007ABB29 /* OJDResultsParser.m */,
+				0283A6F618BFBC08001EC635 /* OJDSearchResultsViewController.h */,
+				0283A6F718BFBC08001EC635 /* OJDSearchResultsViewController.m */,
+				02E38C3D18C2383000BF307F /* OJDMapResultViewController.h */,
+				02E38C3E18C2383000BF307F /* OJDMapResultViewController.m */,
 				025CBF7218BE40B00023EED1 /* Images.xcassets */,
 				025CBF6118BE40B00023EED1 /* Supporting Files */,
 			);
@@ -142,6 +166,7 @@
 		025CBF6118BE40B00023EED1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0283A6EF18BFB0AC001EC635 /* Assets */,
 				025CBF6218BE40B00023EED1 /* EventbriteSearch-Info.plist */,
 				025CBF6318BE40B00023EED1 /* InfoPlist.strings */,
 				025CBF6618BE40B00023EED1 /* main.m */,
@@ -151,33 +176,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		025CBF7F18BE40B10023EED1 /* EventbriteSearchTests */ = {
-			isa = PBXGroup;
-			children = (
-				025CBF8518BE40B10023EED1 /* EventbriteSearchTests.m */,
-				025CBF8018BE40B10023EED1 /* Supporting Files */,
-			);
-			path = EventbriteSearchTests;
-			sourceTree = "<group>";
-		};
-		025CBF8018BE40B10023EED1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				025CBF8118BE40B10023EED1 /* EventbriteSearchTests-Info.plist */,
-				025CBF8218BE40B10023EED1 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		025CBF9518BE61260023EED1 /* XMLReader */ = {
-			isa = PBXGroup;
-			children = (
-				025CBF9618BE61370023EED1 /* XMLReader.h */,
-				025CBF9718BE61370023EED1 /* XMLReader.m */,
-			);
-			name = XMLReader;
-			sourceTree = "<group>";
-		};
 		025CBF9B18BE62EC0023EED1 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +183,34 @@
 				025CBF9D18BE62F80023EED1 /* MBProgressHUD.m */,
 			);
 			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		0283A6EF18BFB0AC001EC635 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0283A6F018BFB0B5001EC635 /* eb_press_big.gif */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		02D6325218BE971C007ABB29 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				02D6325618BE9A7F007ABB29 /* Model Files */,
+				02D6325318BE9731007ABB29 /* EventbriteSearch.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		02D6325618BE9A7F007ABB29 /* Model Files */ = {
+			isa = PBXGroup;
+			children = (
+				0258F8E818C02A3B00465D5A /* VenueDetails.h */,
+				0258F8E918C02A3B00465D5A /* VenueDetails.m */,
+				0258F8E518C02A3B00465D5A /* Event.h */,
+				0258F8E618C02A3B00465D5A /* Event.m */,
+			);
+			name = "Model Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +296,7 @@
 				025CBF9418BE51A60023EED1 /* Localizable.strings in Resources */,
 				025CBF6518BE40B00023EED1 /* InfoPlist.strings in Resources */,
 				025CBF6E18BE40B00023EED1 /* Main.storyboard in Resources */,
+				0283A6F118BFB0B5001EC635 /* eb_press_big.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				025CBF8418BE40B10023EED1 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,10 +347,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0258F8EA18C02A3B00465D5A /* VenueDetails.m in Sources */,
 				025CBF6B18BE40B00023EED1 /* OJDAppDelegate.m in Sources */,
+				02D6325F18BE9BDF007ABB29 /* OJDResultsParser.m in Sources */,
 				025CBF7118BE40B00023EED1 /* OJDSearchViewController.m in Sources */,
+				02E38C3F18C2383000BF307F /* OJDMapResultViewController.m in Sources */,
 				025CBF9E18BE62F80023EED1 /* MBProgressHUD.m in Sources */,
-				025CBF9818BE61370023EED1 /* XMLReader.m in Sources */,
+				0258F8E718C02A3B00465D5A /* Event.m in Sources */,
+				0283A6F818BFBC08001EC635 /* OJDSearchResultsViewController.m in Sources */,
+				02D6325518BE9731007ABB29 /* EventbriteSearch.xcdatamodeld in Sources */,
 				025CBF6718BE40B00023EED1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				025CBF8618BE40B10023EED1 /* EventbriteSearchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,14 +392,6 @@
 				025CBF6D18BE40B00023EED1 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		025CBF8218BE40B10023EED1 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				025CBF8318BE40B10023EED1 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -548,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		02D6325318BE9731007ABB29 /* EventbriteSearch.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				02D6325418BE9731007ABB29 /* EventbriteSearch.xcdatamodel */,
+			);
+			currentVersion = 02D6325418BE9731007ABB29 /* EventbriteSearch.xcdatamodel */;
+			path = EventbriteSearch.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 025CBF4F18BE40B00023EED1 /* Project object */;
 }

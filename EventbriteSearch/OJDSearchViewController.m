@@ -8,11 +8,13 @@
 
 #import "OJDSearchViewController.h"
 #import "AFNetworking.h"
-#import "XMLReader.h"
 #import "MBProgressHUD.h"
+#import "OJDResultsParser.h"
+#import "OJDSearchResultsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 static NSString *const BaseURLString = @"https://www.eventbrite.com/json/event_search?app_key=%@&keywords=%@&city=%@";
-static NSString *const appKey = @"S7MAIC4DPB5TFGTMDN";
+static NSString *const AppKey = @"S7MAIC4DPB5TFGTMDN";
 
 @interface OJDSearchViewController ()
 
@@ -31,16 +33,34 @@ static NSString *const appKey = @"S7MAIC4DPB5TFGTMDN";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(displaySearchResults:)
+												 name:@"JSONParseComplete"
+											   object:nil];
+	
+	//dismisses keyboard if tapped outside of text field
 	UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-	
     tapGesture.cancelsTouchesInView = NO;
-	
     [self.view addGestureRecognizer:tapGesture];
-
+	
+	//change textfield border to Eventbrite orange
+	self.keywordTextField.layer.borderColor = [UIColor colorWithRed:253/255.0 green:125/255.0 blue:34/255.0 alpha:1.0].CGColor;
+	self.keywordTextField.layer.cornerRadius = 0;
+    self.keywordTextField.layer.masksToBounds = YES;
+	self.keywordTextField.layer.borderWidth = 1.0f;
+	
+	self.cityTextField.layer.borderColor = [UIColor colorWithRed:253/255.0 green:125/255.0 blue:34/255.0 alpha:1.0].CGColor;
+	self.cityTextField.layer.cornerRadius = 0;
+    self.cityTextField.layer.masksToBounds = YES;
+	self.cityTextField.layer.borderWidth = 1.0f;
+	
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *) sender
 {
+
 	[self.view endEditing:YES];
 	
 }
@@ -54,6 +74,21 @@ static NSString *const appKey = @"S7MAIC4DPB5TFGTMDN";
 	}
 	
 	[textField resignFirstResponder];
+	[self.view endEditing:YES];
+	
+	return YES;
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+	if (textField == self.keywordTextField) {
+		self.searchKeyword = textField.text;
+	} else if (textField == self.cityTextField){
+		self.searchCity = textField.text;
+	}
+	
+	[textField resignFirstResponder];
+	[self.view endEditing:YES];
 	
 	return YES;
 }
@@ -69,7 +104,26 @@ static NSString *const appKey = @"S7MAIC4DPB5TFGTMDN";
 		[alert show];
 	} else {
 		[self makeRequestWithURL:[self buildURLString]];
+
 	}
+}
+
+- (void)displaySearchResults:(id)sender
+{
+	[self performSegueWithIdentifier:@"SearchCompleted" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"SearchCompleted"])
+    {
+        // Get reference to the destination view controller
+        OJDSearchResultsViewController *vc = [segue destinationViewController];
+		
+		vc.keyword = self.searchKeyword;
+		vc.city = [self.searchCity capitalizedString];
+    }
 }
 
 - (NSString *)buildURLString
@@ -77,7 +131,7 @@ static NSString *const appKey = @"S7MAIC4DPB5TFGTMDN";
 	NSString *cityString = [self.searchCity stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 	NSString *keywordString = [self.searchKeyword stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 	
-	NSString *requestURL = [NSString stringWithFormat:BaseURLString, appKey, keywordString, cityString];
+	NSString *requestURL = [NSString stringWithFormat:BaseURLString, AppKey, keywordString, cityString];
 	
 	return requestURL;
 }
@@ -96,11 +150,10 @@ static NSString *const appKey = @"S7MAIC4DPB5TFGTMDN";
 
 	[operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
 		
-		NSError *error = nil;
-		
-		self.responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:&error];
+		[[OJDResultsParser sharedResultsParser] parseJSONForData:responseObject withKeyword:self.searchKeyword];
 		
 		[HUD hide:YES];
+		
 		
 	} failure:^(AFHTTPRequestOperation *operation, id responseObject) {
 	
@@ -117,46 +170,5 @@ static NSString *const appKey = @"S7MAIC4DPB5TFGTMDN";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Parsing lifecycle
-
-//- (void)startTheParsingProcess:(NSData *)parserData
-//{
-//    NSXMLParser *parser = [[NSXMLParser alloc] initWithData:parserData]; //parserData passed to NSXMLParser delegate which starts the parsing process
-//	
-//    [parser setDelegate:self];
-//    [parser parse]; // starts the event-driven parsing operation.
-//}
-//
-//- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict
-//{
-//    if ([elementName isEqualToString:@"yweather:astronomy"])
-//    {
-//        NSLog(@"Sunrise: %@,  Sunset: %@", [attributeDict valueForKey:@"sunrise"], [attributeDict valueForKey:@"sunset"]);
-//    }
-//	
-//}
-//
-//- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
-//    self.tmpInnerTagText = string; // Make a temp NSString to store the text in-between tags
-//}
-//
-//- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-//{
-//    if ([elementName isEqualToString:@"title"])
-//    {
-//        NSLog(@"%@", self.tmpInnerTagText);
-//    }
-//    if ([elementName isEqualToString:@"description"])
-//    {
-//        NSLog(@"%@", self.tmpInnerTagText);
-//    }
-//}
-//
-//- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
-//{
-//    NSLog(@"Paser Error = %@", parseError);
-//    //TODO: Create Alert message error
-//}
 
 @end
