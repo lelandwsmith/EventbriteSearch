@@ -1,4 +1,0 @@
-xcodeproj '/Users/odormody/Documents/iOS_Development/Personal/EventbriteSearch/EventbriteSearch.xcodeproj'
-
-platform :ios, '7.0'
-pod "AFNetworking", "~> 2.0"
