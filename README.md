@@ -1,6 +1,12 @@
 EventbriteSearch
 ================
 
+To run:
+Pull down project
+Install cocoapods
+run ‘pod install’ from terminal while in the project directory
+open .xcworkspace 
+
 Searches Eventbrite for events
 
 I considered using NSUserDefaults to keep track of searches and then retrive them from 
