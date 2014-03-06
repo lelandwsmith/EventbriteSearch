@@ -95,7 +95,7 @@ static NSString *const AppKey = @"S7MAIC4DPB5TFGTMDN";
 
 - (IBAction)searchButtonTapped:(id)sender
 {
-	if (!self.searchKeyword || !self.searchCity) {
+	if (!(self.searchKeyword || self.searchCity) || ([self.searchCity isEqualToString:@""] || [self.searchKeyword isEqualToString:@""])) {
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ERROR", nil)
 														message:NSLocalizedString(@"FIELD_ERROR", nil)
 													   delegate:self

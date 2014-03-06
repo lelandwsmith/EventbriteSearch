@@ -81,6 +81,12 @@
 	
 	//this code gets only the event data, discarding the summary information at the beginning
 	NSMutableArray *events = [[responseArray valueForKeyPath:@"events"] mutableCopy];
+    
+    if ([events count] == 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"JSONParseComplete" object:self];
+        return;
+    }
+    
 	[events removeObjectAtIndex:0];
 	
 	//avoids putting the same events into the database multiple times

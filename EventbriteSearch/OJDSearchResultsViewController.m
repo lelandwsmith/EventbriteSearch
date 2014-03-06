@@ -42,6 +42,21 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
+    
+    
+    if ([_fetchedResultsController.fetchedObjects count] == 0) {
+        UIView *noResultsView = [[UIView alloc] initWithFrame:self.view.frame];
+        UILabel *noResultsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 60, 320, 30)];
+        noResultsLabel.text = @"No Results Found";
+        noResultsLabel.textAlignment = NSTextAlignmentCenter;
+        noResultsLabel.textColor = [UIColor colorWithRed:253/255.0 green:125/255.0 blue:24/255.0 alpha:1.0];
+        
+        [noResultsView addSubview:noResultsLabel];
+        
+        noResultsView.backgroundColor = [UIColor whiteColor];
+        
+        [self.view addSubview:noResultsView];
+    }
 	
 }
 
